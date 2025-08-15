@@ -99,7 +99,8 @@ const PRODUCTS = [
       // Fetch products from API and set to store
       const fetchProducts = async () => {
         try {
-          const res = await fetch('https://raw.githubusercontent.com/naharnavin89/UVShopProducts/refs/heads/UVbranch/products.json');
+          
+          const res = await fetch(`https://raw.githubusercontent.com/naharnavin89/UVShopProducts/refs/heads/UVbranch/products.json?ts=${Date.now()}`);
           const data = await res.json();
           set({ products: data });
         } catch (e) {
