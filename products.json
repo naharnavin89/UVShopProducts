@@ -64,5 +64,49 @@
     "colors": ["Black", "Olive"],
     "sizes": ["S", "M", "L", "XL"],
     "description": "Bold graphic print on ultra-soft cotton."
+  },
+  {
+    "id": "p7",
+    "name": "Relaxed Fit Jeans",
+    "price": 1999,
+    "category": "Jeans",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Indigo", "Black"],
+    "sizes": ["30", "32", "34", "36"],
+    "description": "Mid-rise denim with a comfortable relaxed fit."
+  },
+   {
+    "id": "p8",
+    "name": "Graphic Tee",
+    "price": 899,
+    "category": "T-Shirts",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1520975936071-2bd5f4b3e3a0?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Black", "Olive"],
+    "sizes": ["S", "M", "L", "XL"],
+    "description": "Bold graphic print on ultra-soft cotton."
+  },
+  {
+    "id": "p9",
+    "name": "Relaxed Fit Jeans",
+    "price": 1999,
+    "category": "Jeans",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Indigo", "Black"],
+    "sizes": ["30", "32", "34", "36"],
+    "description": "Mid-rise denim with a comfortable relaxed fit."
+  },
+  {
+    "id": "p10",
+    "name": "Everyday Cap",
+    "price": 599,
+    "category": "Accessories",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Black", "Khaki"],
+    "sizes": ["One Size"],
+    "description": "Adjustable cap with breathable fabric for sunny days."
   }
 ]
