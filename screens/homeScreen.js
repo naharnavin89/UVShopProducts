@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {
   View,
   Text,
@@ -16,11 +16,14 @@ import {ProductCard} from '../components/productCards'; // Assuming you have a P
   const favorites = useStore((s) => s.favorites);
   const toggleFavorite = useStore((s) => s.toggleFavorite);
   const addToCart = useStore((s) => s.addToCart);
-
+  const {fetchProducts} = useStore();
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('All');
   const [sort, setSort] = useState('Popular'); // Popular | Price: Low to High | Price: High to Low
 
+  // useEffect(() => {
+  //  fetchProducts();
+  // }, [fetchProducts])
   const filtered = useMemo(() => {
     let list = products;
     if (category !== 'All') list = list.filter((p) => p.category === category);

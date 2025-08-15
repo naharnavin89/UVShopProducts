@@ -91,28 +91,46 @@ const PRODUCTS = [
     description: 'Warm and lightweight puffer for cooler days.'
   },
 ];
+
+
  export const useStore = create(
   persist(
-    (set, get) => ({
-      products: PRODUCTS,
-      favorites: {}, // { [productId]: true }
-      cart: {}, // { [productId]: { qty: number, selectedSize?: string, selectedColor?: string } }
-      addToCart: (id, options = {}) =>
-        set((state) => {
-          const existing = state.cart[id] || { qty: 0 };
-          return { cart: { ...state.cart, [id]: { ...existing, ...options, qty: existing.qty + 1 } } };
-        }),
-      updateQty: (id, qty) =>
-        set((state) => {
-          const next = { ...state.cart };
-          if (qty <= 0) delete next[id];
-          else next[id] = { ...(next[id] || {}), qty };
-          return { cart: next };
-        }),
-      removeFromCart: (id) => set((s) => ({ cart: Object.fromEntries(Object.entries(s.cart).filter(([k]) => k !== id)) })),
-      clearCart: () => set({ cart: {} }),
-      toggleFavorite: (id) => set((s) => ({ favorites: { ...s.favorites, [id]: !s.favorites[id] } })),
-    }),
+    (set, get) => {
+      // Fetch products from API and set to store
+      const fetchProducts = async () => {
+        try {
+          const res = await fetch('https://raw.githubusercontent.com/naharnavin89/UVShopProducts/refs/heads/UVbranch/products.json');
+          const data = await res.json();
+          set({ products: data });
+        } catch (e) {
+          set({ products: PRODUCTS }); // fallback to static products on error
+        }
+      };
+
+      // Immediately fetch products when store is initialized
+      fetchProducts();
+
+      return {
+        products: '',
+        favorites: {}, // { [productId]: true }
+        cart: {}, // { [productId]: { qty: number, selectedSize?: string, selectedColor?: string } }
+        addToCart: (id, options = {}) =>
+          set((state) => {
+            const existing = state.cart[id] || { qty: 0 };
+            return { cart: { ...state.cart, [id]: { ...existing, ...options, qty: existing.qty + 1 } } };
+          }),
+        updateQty: (id, qty) =>
+          set((state) => {
+            const next = { ...state.cart };
+            if (qty <= 0) delete next[id];
+            else next[id] = { ...(next[id] || {}), qty };
+            return { cart: next };
+          }),
+        removeFromCart: (id) => set((s) => ({ cart: Object.fromEntries(Object.entries(s.cart).filter(([k]) => k !== id)) })),
+        clearCart: () => set({ cart: {} }),
+        toggleFavorite: (id) => set((s) => ({ favorites: { ...s.favorites, [id]: !s.favorites[id] } })),
+      };
+    },
     { name: 'rn-clothes-store', getStorage: () => AsyncStorage }
   )
 );
