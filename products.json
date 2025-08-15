@@ -1,0 +1,90 @@
+[
+  {
+    "id": "p1",
+    "name": "Classic White Tee",
+    "price": 799,
+    "category": "T-Shirts",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop",
+    "colors": ["White", "Black", "Blue"],
+    "sizes": ["S", "M", "L", "XL"],
+    "description": "Soft cotton crew neck for everyday comfort."
+  },
+  {
+    "id": "p2",
+    "name": "Relaxed Fit Jeans",
+    "price": 1999,
+    "category": "Jeans",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Indigo", "Black"],
+    "sizes": ["30", "32", "34", "36"],
+    "description": "Mid-rise denim with a comfortable relaxed fit."
+  },
+  {
+    "id": "p3",
+    "name": "Minimalist Sneakers",
+    "price": 2899,
+    "category": "Shoes",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop",
+    "colors": ["White", "Grey"],
+    "sizes": ["7", "8", "9", "10", "11"],
+    "description": "Lightweight sneakers designed for all-day wear."
+  },
+  {
+    "id": "p4",
+    "name": "Denim Jacket",
+    "price": 2499,
+    "category": "Jackets",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1548883354-7622d03aca20?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Blue"],
+    "sizes": ["S", "M", "L"],
+    "description": "Timeless denim jacket with a modern silhouette."
+  },
+  {
+    "id": "p5",
+    "name": "Everyday Cap",
+    "price": 599,
+    "category": "Accessories",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Black", "Khaki"],
+    "sizes": ["One Size"],
+    "description": "Adjustable cap with breathable fabric for sunny days."
+  },
+  {
+    "id": "p6",
+    "name": "Graphic Tee",
+    "price": 899,
+    "category": "T-Shirts",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1520975936071-2bd5f4b3e3a0?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Black", "Olive"],
+    "sizes": ["S", "M", "L", "XL"],
+    "description": "Bold graphic print on ultra-soft cotton."
+  },
+  {
+    "id": "p7",
+    "name": "Leather Boots",
+    "price": 3499,
+    "category": "Shoes",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1511020053560-16147b535dcc?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Brown", "Black"],
+    "sizes": ["7", "8", "9", "10"],
+    "description": "Durable leather boots with cushioned insoles."
+  },
+  {
+    "id": "p8",
+    "name": "Puffer Jacket",
+    "price": 3999,
+    "category": "Jackets",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=800&auto=format&fit=crop",
+    "colors": ["Navy", "Black"],
+    "sizes": ["M", "L", "XL"],
+    "description": "Warm and lightweight puffer for cooler days."
+  }
+]
